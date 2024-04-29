@@ -1,0 +1,3 @@
+[submodule "Lab2_submodule_directory"]
+	path = Lab2_submodule_directory
+	url = https://github.com/Harshutivate/Lab2.git
