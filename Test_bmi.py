@@ -2,13 +2,20 @@ import Lab2_submodule_directory.bmi
 import pytest
 
 def test_bmi_normal_weight():
-    # Test BMI calculation for normal weight (BMI between 18.5 and 24.9)
-    assert Lab2_submodule_directory.bmi.calculate_bmi(1.75, 70) == 0
+    bmi_result = Lab2_submodule_directory.bmi.calculate_bmi(1.75, 70)
+    if 18.5 <= bmi_result <= 25:
+        print("Normal Weight")
+    assert bmi_result == 0
 
 def test_bmi_over_weight():
-    # Test BMI calculation for overweight (BMI greater than or equal to 25)
-    assert Lab2_submodule_directory.bmi.calculate_bmi(1.75, 85) == 1
+    bmi_result = Lab2_submodule_directory.bmi.calculate_bmi(1.75, 85)
+    if bmi_result > 25:
+        print("Over Weight")
+    assert bmi_result == 1
 
 def test_bmi_under_weight():
-    # Test BMI calculation for underweight (BMI less than 18.5)
-    assert Lab2_submodule_directory.bmi.calculate_bmi(1.75, 55) == -1
+    bmi_result = Lab2_submodule_directory.bmi.calculate_bmi(1.75, 55)
+    if bmi_result < 18.5:
+        print("Under Weight")
+    assert bmi_result == -1
+
